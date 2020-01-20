@@ -37,6 +37,8 @@ LOCAL_PACKAGE_NAME := AntHalService
 ifeq ($(filter 8% O% o%,$(TARGET_PLATFORM_VERSION)),)
 LOCAL_SDK_VERSION := system_current
 endif
+LOCAL_SYSTEM_EXT_MODULE := true
+
 include $(BUILD_PACKAGE)
 
 endif # BOARD_ANT_WIRELESS_DEVICE defined
