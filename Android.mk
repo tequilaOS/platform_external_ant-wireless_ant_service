@@ -17,6 +17,7 @@
 #
 
 ifneq ($(BOARD_ANT_WIRELESS_DEVICE),)
+ifneq ($(filter $(ALL_MODULES),libantradio),)
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -41,4 +42,5 @@ LOCAL_SYSTEM_EXT_MODULE := true
 
 include $(BUILD_PACKAGE)
 
+endif # ALL_MODULES contains libantradio
 endif # BOARD_ANT_WIRELESS_DEVICE defined
