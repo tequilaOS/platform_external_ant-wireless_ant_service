@@ -16,8 +16,7 @@
 # limitations under the License.
 #
 
-ifeq ($(BOARD_ANT_WIRELESS_DEVICE),"vfs-prerelease")
-
+ifneq ($(BOARD_ANT_WIRELESS_DEVICE),)
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
